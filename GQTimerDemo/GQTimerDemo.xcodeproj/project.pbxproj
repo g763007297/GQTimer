@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B6F2F9E1203EA5E5009AEC52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F2F9E0203EA5E5009AEC52 /* AppDelegate.m */; };
+		B6F2F9E4203EA5E5009AEC52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F2F9E3203EA5E5009AEC52 /* ViewController.m */; };
+		B6F2F9E7203EA5E5009AEC52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F2F9E5203EA5E5009AEC52 /* Main.storyboard */; };
+		B6F2F9E9203EA5E5009AEC52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F2F9E8203EA5E5009AEC52 /* Assets.xcassets */; };
+		B6F2F9EC203EA5E5009AEC52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F2F9EA203EA5E5009AEC52 /* LaunchScreen.storyboard */; };
+		B6F2F9EF203EA5E5009AEC52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F2F9EE203EA5E5009AEC52 /* main.m */; };
+		B6F2F9F9203EA5E5009AEC52 /* GQTimerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F2F9F8203EA5E5009AEC52 /* GQTimerDemoTests.m */; };
+		B6F2FA04203EA5E5009AEC52 /* GQTimerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F2FA03203EA5E5009AEC52 /* GQTimerDemoUITests.m */; };
+		B6F2FA14203EA61A009AEC52 /* GQTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F2FA13203EA61A009AEC52 /* GQTimer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B6F2F9F5203EA5E5009AEC52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6F2F9D4203EA5E5009AEC52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6F2F9DB203EA5E5009AEC52;
+			remoteInfo = GQTimerDemo;
+		};
+		B6F2FA00203EA5E5009AEC52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6F2F9D4203EA5E5009AEC52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6F2F9DB203EA5E5009AEC52;
+			remoteInfo = GQTimerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B6F2F9DC203EA5E5009AEC52 /* GQTimerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GQTimerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6F2F9DF203EA5E5009AEC52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B6F2F9E0203EA5E5009AEC52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B6F2F9E2203EA5E5009AEC52 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B6F2F9E3203EA5E5009AEC52 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B6F2F9E6203EA5E5009AEC52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B6F2F9E8203EA5E5009AEC52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B6F2F9EB203EA5E5009AEC52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B6F2F9ED203EA5E5009AEC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6F2F9EE203EA5E5009AEC52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B6F2F9F4203EA5E5009AEC52 /* GQTimerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GQTimerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6F2F9F8203EA5E5009AEC52 /* GQTimerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQTimerDemoTests.m; sourceTree = "<group>"; };
+		B6F2F9FA203EA5E5009AEC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6F2F9FF203EA5E5009AEC52 /* GQTimerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GQTimerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6F2FA03203EA5E5009AEC52 /* GQTimerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQTimerDemoUITests.m; sourceTree = "<group>"; };
+		B6F2FA05203EA5E5009AEC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6F2FA12203EA61A009AEC52 /* GQTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQTimer.h; sourceTree = "<group>"; };
+		B6F2FA13203EA61A009AEC52 /* GQTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQTimer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B6F2F9D9203EA5E5009AEC52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6F2F9F1203EA5E5009AEC52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6F2F9FC203EA5E5009AEC52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B6F2F9D3203EA5E5009AEC52 = {
+			isa = PBXGroup;
+			children = (
+				B6F2F9DE203EA5E5009AEC52 /* GQTimerDemo */,
+				B6F2F9F7203EA5E5009AEC52 /* GQTimerDemoTests */,
+				B6F2FA02203EA5E5009AEC52 /* GQTimerDemoUITests */,
+				B6F2F9DD203EA5E5009AEC52 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B6F2F9DD203EA5E5009AEC52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6F2F9DC203EA5E5009AEC52 /* GQTimerDemo.app */,
+				B6F2F9F4203EA5E5009AEC52 /* GQTimerDemoTests.xctest */,
+				B6F2F9FF203EA5E5009AEC52 /* GQTimerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B6F2F9DE203EA5E5009AEC52 /* GQTimerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B6F2FA11203EA5F2009AEC52 /* GQTimer */,
+				B6F2F9DF203EA5E5009AEC52 /* AppDelegate.h */,
+				B6F2F9E0203EA5E5009AEC52 /* AppDelegate.m */,
+				B6F2F9E2203EA5E5009AEC52 /* ViewController.h */,
+				B6F2F9E3203EA5E5009AEC52 /* ViewController.m */,
+				B6F2F9E5203EA5E5009AEC52 /* Main.storyboard */,
+				B6F2F9E8203EA5E5009AEC52 /* Assets.xcassets */,
+				B6F2F9EA203EA5E5009AEC52 /* LaunchScreen.storyboard */,
+				B6F2F9ED203EA5E5009AEC52 /* Info.plist */,
+				B6F2F9EE203EA5E5009AEC52 /* main.m */,
+			);
+			path = GQTimerDemo;
+			sourceTree = "<group>";
+		};
+		B6F2F9F7203EA5E5009AEC52 /* GQTimerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B6F2F9F8203EA5E5009AEC52 /* GQTimerDemoTests.m */,
+				B6F2F9FA203EA5E5009AEC52 /* Info.plist */,
+			);
+			path = GQTimerDemoTests;
+			sourceTree = "<group>";
+		};
+		B6F2FA02203EA5E5009AEC52 /* GQTimerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B6F2FA03203EA5E5009AEC52 /* GQTimerDemoUITests.m */,
+				B6F2FA05203EA5E5009AEC52 /* Info.plist */,
+			);
+			path = GQTimerDemoUITests;
+			sourceTree = "<group>";
+		};
+		B6F2FA11203EA5F2009AEC52 /* GQTimer */ = {
+			isa = PBXGroup;
+			children = (
+				B6F2FA12203EA61A009AEC52 /* GQTimer.h */,
+				B6F2FA13203EA61A009AEC52 /* GQTimer.m */,
+			);
+			name = GQTimer;
+			path = ../../GQTimer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B6F2F9DB203EA5E5009AEC52 /* GQTimerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6F2FA08203EA5E5009AEC52 /* Build configuration list for PBXNativeTarget "GQTimerDemo" */;
+			buildPhases = (
+				B6F2F9D8203EA5E5009AEC52 /* Sources */,
+				B6F2F9D9203EA5E5009AEC52 /* Frameworks */,
+				B6F2F9DA203EA5E5009AEC52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GQTimerDemo;
+			productName = GQTimerDemo;
+			productReference = B6F2F9DC203EA5E5009AEC52 /* GQTimerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B6F2F9F3203EA5E5009AEC52 /* GQTimerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6F2FA0B203EA5E5009AEC52 /* Build configuration list for PBXNativeTarget "GQTimerDemoTests" */;
+			buildPhases = (
+				B6F2F9F0203EA5E5009AEC52 /* Sources */,
+				B6F2F9F1203EA5E5009AEC52 /* Frameworks */,
+				B6F2F9F2203EA5E5009AEC52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6F2F9F6203EA5E5009AEC52 /* PBXTargetDependency */,
+			);
+			name = GQTimerDemoTests;
+			productName = GQTimerDemoTests;
+			productReference = B6F2F9F4203EA5E5009AEC52 /* GQTimerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B6F2F9FE203EA5E5009AEC52 /* GQTimerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6F2FA0E203EA5E5009AEC52 /* Build configuration list for PBXNativeTarget "GQTimerDemoUITests" */;
+			buildPhases = (
+				B6F2F9FB203EA5E5009AEC52 /* Sources */,
+				B6F2F9FC203EA5E5009AEC52 /* Frameworks */,
+				B6F2F9FD203EA5E5009AEC52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6F2FA01203EA5E5009AEC52 /* PBXTargetDependency */,
+			);
+			name = GQTimerDemoUITests;
+			productName = GQTimerDemoUITests;
+			productReference = B6F2F9FF203EA5E5009AEC52 /* GQTimerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B6F2F9D4203EA5E5009AEC52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = gaoqi;
+				TargetAttributes = {
+					B6F2F9DB203EA5E5009AEC52 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					B6F2F9F3203EA5E5009AEC52 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B6F2F9DB203EA5E5009AEC52;
+					};
+					B6F2F9FE203EA5E5009AEC52 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B6F2F9DB203EA5E5009AEC52;
+					};
+				};
+			};
+			buildConfigurationList = B6F2F9D7203EA5E5009AEC52 /* Build configuration list for PBXProject "GQTimerDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B6F2F9D3203EA5E5009AEC52;
+			productRefGroup = B6F2F9DD203EA5E5009AEC52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B6F2F9DB203EA5E5009AEC52 /* GQTimerDemo */,
+				B6F2F9F3203EA5E5009AEC52 /* GQTimerDemoTests */,
+				B6F2F9FE203EA5E5009AEC52 /* GQTimerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B6F2F9DA203EA5E5009AEC52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6F2F9EC203EA5E5009AEC52 /* LaunchScreen.storyboard in Resources */,
+				B6F2F9E9203EA5E5009AEC52 /* Assets.xcassets in Resources */,
+				B6F2F9E7203EA5E5009AEC52 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6F2F9F2203EA5E5009AEC52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6F2F9FD203EA5E5009AEC52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B6F2F9D8203EA5E5009AEC52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6F2F9E4203EA5E5009AEC52 /* ViewController.m in Sources */,
+				B6F2FA14203EA61A009AEC52 /* GQTimer.m in Sources */,
+				B6F2F9EF203EA5E5009AEC52 /* main.m in Sources */,
+				B6F2F9E1203EA5E5009AEC52 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6F2F9F0203EA5E5009AEC52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6F2F9F9203EA5E5009AEC52 /* GQTimerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6F2F9FB203EA5E5009AEC52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6F2FA04203EA5E5009AEC52 /* GQTimerDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B6F2F9F6203EA5E5009AEC52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6F2F9DB203EA5E5009AEC52 /* GQTimerDemo */;
+			targetProxy = B6F2F9F5203EA5E5009AEC52 /* PBXContainerItemProxy */;
+		};
+		B6F2FA01203EA5E5009AEC52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6F2F9DB203EA5E5009AEC52 /* GQTimerDemo */;
+			targetProxy = B6F2FA00203EA5E5009AEC52 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B6F2F9E5203EA5E5009AEC52 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6F2F9E6203EA5E5009AEC52 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B6F2F9EA203EA5E5009AEC52 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6F2F9EB203EA5E5009AEC52 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B6F2FA06203EA5E5009AEC52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B6F2FA07203EA5E5009AEC52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B6F2FA09203EA5E5009AEC52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GQTimerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wp.GQTimerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6F2FA0A203EA5E5009AEC52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GQTimerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wp.GQTimerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B6F2FA0C203EA5E5009AEC52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GQTimerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wp.GQTimerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GQTimerDemo.app/GQTimerDemo";
+			};
+			name = Debug;
+		};
+		B6F2FA0D203EA5E5009AEC52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GQTimerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wp.GQTimerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GQTimerDemo.app/GQTimerDemo";
+			};
+			name = Release;
+		};
+		B6F2FA0F203EA5E5009AEC52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GQTimerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wp.GQTimerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GQTimerDemo;
+			};
+			name = Debug;
+		};
+		B6F2FA10203EA5E5009AEC52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GQTimerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wp.GQTimerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GQTimerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B6F2F9D7203EA5E5009AEC52 /* Build configuration list for PBXProject "GQTimerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6F2FA06203EA5E5009AEC52 /* Debug */,
+				B6F2FA07203EA5E5009AEC52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6F2FA08203EA5E5009AEC52 /* Build configuration list for PBXNativeTarget "GQTimerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6F2FA09203EA5E5009AEC52 /* Debug */,
+				B6F2FA0A203EA5E5009AEC52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6F2FA0B203EA5E5009AEC52 /* Build configuration list for PBXNativeTarget "GQTimerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6F2FA0C203EA5E5009AEC52 /* Debug */,
+				B6F2FA0D203EA5E5009AEC52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6F2FA0E203EA5E5009AEC52 /* Build configuration list for PBXNativeTarget "GQTimerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6F2FA0F203EA5E5009AEC52 /* Debug */,
+				B6F2FA10203EA5E5009AEC52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B6F2F9D4203EA5E5009AEC52 /* Project object */;
+}
