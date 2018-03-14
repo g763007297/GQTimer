@@ -114,7 +114,7 @@ if ([NSThread isMainThread]) {\
 }
 
 - (void)suspend {
-    if (self.timerState != GQTimerStateSuspend) {
+    if (self.timerState != GQTimerStateSuspend && _timer) {
         self.timerState = GQTimerStateSuspend;
         dispatch_suspend(self.timer);
     }
