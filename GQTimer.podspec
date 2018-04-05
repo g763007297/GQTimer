@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "GQTimer"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "基于GCD的定时器"
 
   s.homepage     = "https://github.com/g763007297/GQTimer"

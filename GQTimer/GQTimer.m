@@ -29,6 +29,8 @@ if ([NSThread isMainThread]) {\
 
 @property (nonatomic, strong) dispatch_source_t   timer;
 
+@property (nonatomic, strong) dispatch_block_t    resumeBlock;
+
 @property (nonatomic,strong)  NSDate              *beforeDate; // 上次进入后台时间
 
 @property (nonatomic, assign) NSTimeInterval      timerStep;//
@@ -106,10 +108,12 @@ if ([NSThread isMainThread]) {\
     if (self.timerState != GQTimerStateResume) {
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(timeInterval * NSEC_PER_SEC));
         GQWeakify(self);
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        _resumeBlock = dispatch_block_create(DISPATCH_BLOCK_BARRIER, ^{
             GQStrongify(self);
             [self resume];
+            self->_resumeBlock = nil;
         });
+        dispatch_after(popTime, dispatch_get_main_queue(), _resumeBlock);
     }
 }
 
@@ -121,6 +125,10 @@ if ([NSThread isMainThread]) {\
 }
 
 - (void)invalid {
+    if (nil != _resumeBlock) {
+        dispatch_block_cancel(_resumeBlock);
+        _resumeBlock = nil;
+    }
     if (nil != _timer) {
         if (self.timerState != GQTimerStateResume) {
             [self resume];

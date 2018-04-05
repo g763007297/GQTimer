@@ -103,6 +103,10 @@ typedef enum : NSUInteger {
 	
 (3) 1.0.2
 	
+	修复延迟resume定时器，同时invalid定时器无效的问题
+	
+(4) 1.0.3
+	
 	wait a moment
 	
 ## Support
