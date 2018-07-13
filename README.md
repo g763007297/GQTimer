@@ -23,20 +23,60 @@
  
  param timerStep 单位触发时间   单位秒
  param yesOrNo 是否重复运行
+ param userInfo 自定义信息
  param timerBlock 回调block
  return GQTimer
  */
-+ (instancetype)timerWithTimerStep:(NSTimeInterval)timerStep repeats:(BOOL)yesOrNo withBlock:(GQTimerBlock)timerBlock;
++ (instancetype)timerWithTimerStep:(NSTimeInterval)timerStep
+                           repeats:(BOOL)yesOrNo
+                          userInfo:(NSDictionary *)userInfo
+                         withBlock:(GQTimerBlock)timerBlock;
 
 /**
  创建在异步线程回调定时器
  
  param timerStep 单位运行时间   单位秒
  param yesOrNo 是否重复运行
+ param userInfo 自定义信息
  param timerBlock 回调block
  return GQTimer
  */
-+ (instancetype)scheduledTimerWithTimerStep:(NSTimeInterval)timerStep repeats:(BOOL)yesOrNo withBlock:(GQTimerBlock)timerBlock;
++ (instancetype)scheduledTimerWithTimerStep:(NSTimeInterval)timerStep
+                                    repeats:(BOOL)yesOrNo
+                                   userInfo:(NSDictionary *)userInfo
+                                  withBlock:(GQTimerBlock)timerBlock;
+
+/**
+ 创建在主线程中回调定时器
+
+ @param timerStep 单位触发时间   单位秒
+ @param yesOrNo 是否重复运行
+ @param userInfo 自定义信息
+ @param aTarget target
+ @param aSelector selector
+ @return GQTimer
+ */
++ (instancetype)timerWithTimerStep:(NSTimeInterval)timerStep
+                           repeats:(BOOL)yesOrNo
+                          userInfo:(NSDictionary *)userInfo
+                            target:(id)aTarget
+                          selector:(SEL)aSelector;
+
+/**
+ 创建在异步线程回调定时器
+
+ @param timerStep 单位触发时间   单位秒
+ @param yesOrNo 是否重复运行
+ @param userInfo 自定义信息
+ @param aTarget target
+ @param aSelector selector
+ @return GQTimer
+ */
++ (instancetype)scheduledTimerWithTimerStep:(NSTimeInterval)timerStep
+                                    repeats:(BOOL)yesOrNo
+                                   userInfo:(NSDictionary *)userInfo
+                                     target:(id)aTarget
+                                   selector:(SEL)aSelector;
 
 ```
 
@@ -110,7 +150,7 @@ typedef enum : NSUInteger {
 	新增target-selector回调，新增userInfo设置
 	
 (5) 1.0.4
-
+	
 	wait a moment
 	
 ## Support

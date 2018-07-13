@@ -24,25 +24,7 @@ NS_CLASS_AVAILABLE_IOS(4_0)
 
 @interface GQTimer : NSObject
 
-/**
- 创建在主线程中回调定时器
- 
- param timerStep 单位触发时间   单位秒
- param yesOrNo 是否重复运行
- param timerBlock 回调block
- return GQTimer
- */
-+ (instancetype)timerWithTimerStep:(NSTimeInterval)timerStep repeats:(BOOL)yesOrNo withBlock:(GQTimerBlock)timerBlock DEPRECATED_MSG_ATTRIBUTE("Use timerWithTimerStep:repeats:userInfo:withBlock instead");
-
-/**
- 创建在异步线程回调定时器
- 
- param timerStep 单位运行时间   单位秒
- param yesOrNo 是否重复运行
- param timerBlock 回调block
- return GQTimer
- */
-+ (instancetype)scheduledTimerWithTimerStep:(NSTimeInterval)timerStep repeats:(BOOL)yesOrNo withBlock:(GQTimerBlock)timerBlock DEPRECATED_MSG_ATTRIBUTE("Use scheduledTimerWithTimerStep:repeats:userInfo:withBlock instead");
+#pragma init method
 
 /**
  创建在主线程中回调定时器
@@ -104,6 +86,8 @@ NS_CLASS_AVAILABLE_IOS(4_0)
                                      target:(id)aTarget
                                    selector:(SEL)aSelector;
 
+#pragma avaliable attribute
+
 /**
  从创建启动起总共运行时间  单位为秒级别
  */
@@ -118,6 +102,8 @@ NS_CLASS_AVAILABLE_IOS(4_0)
  定时器状态
  */
 @property (nonatomic, assign, readonly) GQTimerState timerState;
+
+#pragma public method
 
 /**
  立即恢复计时器
@@ -140,5 +126,11 @@ NS_CLASS_AVAILABLE_IOS(4_0)
  销毁计时器
  */
 - (void)invalid;
+
+#pragma DEPRECATED Selector
+
++ (instancetype)timerWithTimerStep:(NSTimeInterval)timerStep repeats:(BOOL)yesOrNo withBlock:(GQTimerBlock)timerBlock DEPRECATED_MSG_ATTRIBUTE("Use timerWithTimerStep:repeats:userInfo:withBlock instead");
+
++ (instancetype)scheduledTimerWithTimerStep:(NSTimeInterval)timerStep repeats:(BOOL)yesOrNo withBlock:(GQTimerBlock)timerBlock DEPRECATED_MSG_ATTRIBUTE("Use scheduledTimerWithTimerStep:repeats:userInfo:withBlock instead");
 
 @end
