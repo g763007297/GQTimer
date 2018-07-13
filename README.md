@@ -107,6 +107,10 @@ typedef enum : NSUInteger {
 	
 (4) 1.0.3
 	
+	新增target-selector回调，新增userInfo设置
+	
+(5) 1.0.4
+
 	wait a moment
 	
 ## Support

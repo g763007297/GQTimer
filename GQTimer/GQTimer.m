@@ -37,6 +37,12 @@ if ([NSThread isMainThread]) {\
 
 @property (nonatomic, strong) GQTimerBlock        timerBlock;
 
+@property (nonatomic, weak)   id                  target;
+
+@property (nonatomic, assign) SEL                 selector;
+
+@property (nonatomic, strong) NSDictionary        *userInfo;
+
 @property (nonatomic, assign) BOOL                scheduled;//是否需要异步
 
 @property (nonatomic, assign) BOOL                repeats;//是否需要重复
@@ -56,22 +62,56 @@ if ([NSThread isMainThread]) {\
 + (instancetype)timerWithTimerStep:(NSTimeInterval)timerStep
                            repeats:(BOOL)yesOrNo
                          withBlock:(GQTimerBlock)timerBlock {
-    GQTimer *timer = [[GQTimer alloc] init];
-    timer.timerStep = timerStep;
-    timer.timerBlock = timerBlock;
-    timer.repeats = yesOrNo;
-    return timer;
+    return [GQTimer timerWithTimerStep:timerStep repeats:yesOrNo userInfo:nil withBlock:timerBlock];
 }
 
 + (instancetype)scheduledTimerWithTimerStep:(NSTimeInterval)timerStep
                                     repeats:(BOOL)yesOrNo
                                   withBlock:(GQTimerBlock)timerBlock {
+    return [GQTimer scheduledTimerWithTimerStep:timerStep repeats:yesOrNo userInfo:nil withBlock:timerBlock];
+}
+
++ (instancetype)timerWithTimerStep:(NSTimeInterval)timerStep repeats:(BOOL)yesOrNo userInfo:(NSDictionary *)userInfo withBlock:(GQTimerBlock)timerBlock {
     GQTimer *timer = [[GQTimer alloc] init];
     timer.timerStep = timerStep;
-    timer.timerBlock = timerBlock;
+    timer.timerBlock = [timerBlock copy];
+    timer.userInfo = userInfo;
+    timer.scheduled = NO;
+    timer.repeats = yesOrNo;
+    return timer;
+}
+
++ (instancetype)scheduledTimerWithTimerStep:(NSTimeInterval)timerStep repeats:(BOOL)yesOrNo userInfo:(NSDictionary *)userInfo withBlock:(GQTimerBlock)timerBlock {
+    GQTimer *timer = [[GQTimer alloc] init];
+    timer.timerStep = timerStep;
+    timer.timerBlock = [timerBlock copy];
+    timer.userInfo = userInfo;
     timer.scheduled = YES;
     timer.repeats = yesOrNo;
     return timer;
+}
+
++ (instancetype)timerWithTimerStep:(NSTimeInterval)timerStep                           repeats:(BOOL)yesOrNo userInfo:(NSDictionary *)userInfo target:(id)aTarget selector:(SEL)aSelector {
+    GQTimer *timer = [[GQTimer alloc] init];
+    timer.timerStep = timerStep;
+    timer.target = aTarget;
+    timer.selector = aSelector;
+    timer.userInfo = userInfo;
+    timer.scheduled = NO;
+    timer.repeats = yesOrNo;
+    return timer;
+}
+
++ (instancetype)scheduledTimerWithTimerStep:(NSTimeInterval)timerStep repeats:(BOOL)yesOrNo userInfo:(NSDictionary *)userInfo target:(id)aTarget selector:(SEL)aSelector {
+    GQTimer *timer = [[GQTimer alloc] init];
+    timer.timerStep = timerStep;
+    timer.target = aTarget;
+    timer.selector = aSelector;
+    timer.userInfo = userInfo;
+    timer.scheduled = YES;
+    timer.repeats = yesOrNo;
+    return timer;
+
 }
 
 #pragma mark -- life cycle
@@ -175,11 +215,18 @@ if ([NSThread isMainThread]) {\
     if (_scheduled) {
         if (_timerBlock) {
             _timerBlock(self);
+        } else if (_target) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+            [self.target performSelector:self.selector withObject:_userInfo afterDelay:0.0f];
+#pragma clang diagnostic pop
         }
     } else {
         GQDispatch_main_async_safe(^{
             if (_timerBlock) {
                 _timerBlock(self);
+            } else if (self.target) {
+                [self.target performSelector:self.selector withObject:_userInfo afterDelay:0.0f];
             }
         });
     }
