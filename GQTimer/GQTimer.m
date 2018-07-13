@@ -221,9 +221,11 @@ if ([NSThread isMainThread]) {\
 #pragma clang diagnostic pop
         }
     } else {
+        GQWeakify(self);
         GQDispatch_main_async_safe(^{
-            if (_timerBlock) {
-                _timerBlock(self);
+            GQStrongify(self);
+            if (self.timerBlock) {
+                self.timerBlock(self);
             } else if (self.target) {
                 [self.target performSelector:self.selector withObject:self afterDelay:0.0f];
             }

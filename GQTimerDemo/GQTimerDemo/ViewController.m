@@ -24,7 +24,7 @@
     _timer = [GQTimer timerWithTimerStep:1.0 repeats:YES userInfo:@{@"userinfo":@"123"} withBlock:^(GQTimer *timer) {
         NSLog(@"%@",timer.userInfo);
     }];
-//    [_timer resume];
+    [_timer resume];
     
     _timers = [GQTimer scheduledTimerWithTimerStep:1.0 repeats:YES userInfo:@{@"userinfo":@"456"} target:self selector:@selector(timerFire:)];
     [_timers resume];
