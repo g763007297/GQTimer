@@ -111,7 +111,6 @@ if ([NSThread isMainThread]) {\
     timer.scheduled = YES;
     timer.repeats = yesOrNo;
     return timer;
-
 }
 
 #pragma mark -- life cycle
@@ -215,10 +214,10 @@ if ([NSThread isMainThread]) {\
     if (_scheduled) {
         if (_timerBlock) {
             _timerBlock(self);
-        } else if (_target) {
+        } else if (self.target) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-            [self.target performSelector:self.selector withObject:_userInfo afterDelay:0.0f];
+            [self.target performSelector:self.selector withObject:self];
 #pragma clang diagnostic pop
         }
     } else {
@@ -226,7 +225,7 @@ if ([NSThread isMainThread]) {\
             if (_timerBlock) {
                 _timerBlock(self);
             } else if (self.target) {
-                [self.target performSelector:self.selector withObject:_userInfo afterDelay:0.0f];
+                [self.target performSelector:self.selector withObject:self afterDelay:0.0f];
             }
         });
     }
