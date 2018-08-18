@@ -147,12 +147,12 @@ if ([NSThread isMainThread]) {\
     if (self.timerState != GQTimerStateResume) {
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(timeInterval * NSEC_PER_SEC));
         GQWeakify(self);
-        _resumeBlock = dispatch_block_create(DISPATCH_BLOCK_BARRIER, ^{
+        self.resumeBlock = dispatch_block_create(DISPATCH_BLOCK_BARRIER, ^{
             GQStrongify(self);
             [self resume];
-            self->_resumeBlock = nil;
+            self.resumeBlock = nil;
         });
-        dispatch_after(popTime, dispatch_get_main_queue(), _resumeBlock);
+        dispatch_after(popTime, dispatch_get_main_queue(), self.resumeBlock);
     }
 }
 
